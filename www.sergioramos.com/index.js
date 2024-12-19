@@ -1,44 +1,34 @@
+const carousel = document.querySelector("#image-carousel");
+const images = document.querySelectorAll("#image-carousel img");
+const prevButton = document.querySelector("#prev");
+const nextButton = document.querySelector("#next");
 
-const wrapper = document.querySelector('#wrapper')
-const carousel = document.querySelector('#image-carousel')
-const images = document.querySelectorAll('img')
-const btn = document.querySelectorAll('button')
-const previous = document.querySelector('#prev')
-const nxt = document.querySelector('#next')
+let currentIndex = 0;
+const imagesToShow = 3; // Number of images visible at a time
+const totalImages = images.length;
 
+// Calculate the width of a single image
+const imageWidth = images[0].clientWidth;
 
-images.forEach((slide,index)=>{
-slide.style.left = `${index * 100}%`
-})
-let counter = 0;
+// Update carousel position
+const updateCarousel = () => {
+    carousel.style.transform = `translateX(-${currentIndex * (100 / imagesToShow)}%)`;
+};
 
-const slideImage = ()=>{
-    images.forEach(
-        (e) => {
-            e.style.transform = `translateX(-${counter*100}%)`
-        }
-    )
-}
-
-
-
-const prev = ()=>{
-    if(counter > 0){
-        
-        counter --;
-        slideImage();
-        console.log(counter);
-        
+// Add event listeners for buttons
+prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
     }
-}
-const next = ()=>{
-    if(counter <= (images.length - 2)){
-        
-        counter ++;
-        slideImage();
-        console.log(counter);
-        
-    }
-}
+});
 
-        
+nextButton.addEventListener("click", () => {
+    if (currentIndex < totalImages - imagesToShow) {
+        currentIndex++;
+        updateCarousel();
+    }
+});
+
+// Initialize the carousel
+updateCarousel();
