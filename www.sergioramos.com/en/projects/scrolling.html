@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <section class="srex-about-us-two srex-section">
+        <div class="container">
+          <div class="row justify-content-between">
+           
+            <div class="col-12 col-lg-4">
+              <div class="scrolling-gallery">
+                <div class="gallery-track">
+                 
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282361/36_ojacie.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282363/38_j2idkx.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282362/39_fkj3yg.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282361/34_pcv2nm.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282362/20_sqrjxj.webp" alt="About_Us_Right_1" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282361/36_ojacie.webp" alt="About_Us_Right_2" />
+                  </div> <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282361/35_aimqav.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282358/11_hzr0n0.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282357/2_yx3hui.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282357/1_jkh796.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282356/5_k5rsgv.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734282360/22_xbeew7.webp" alt="About_Us_Right_3" />
+                  </div>
+                  <!-- Add more images if needed -->
+               
+              
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+<script>
+    const galleryTrack = document.querySelector('.gallery-track');
+const galleryItems = document.querySelectorAll('.gallery-item');
+let index = 0;
+
+function scrollGallery() {
+  index++;
+  if (index >= galleryItems.length) {
+    index = 0;
+  }
+  const scrollAmount = index * galleryItems[0].clientWidth; // Calculate scroll position
+  galleryTrack.style.transform = `translateX(-${scrollAmount}px)`;
+}
+
+// Scroll images every 3 seconds
+setInterval(scrollGallery, 3000);
+
+</script>
+</body>
+</html>

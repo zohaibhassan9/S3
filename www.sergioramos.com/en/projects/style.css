@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Optional background color */
+  overflow: hidden; /* Prevent unwanted scrollbars */
+}
+
+.scrolling-gallery {
+  width: 70%; /* Container width */
+  height: 50vh; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflow for scroll effect */
+  position: relative; /* To position children properly */
+  display: flex;
+  justify-content: center; /* Center the scrolling content */
+  align-items: center;
+}
+
+.gallery-track {
+  display: flex; /* Align items horizontally */
+  gap: 10px; /* Add spacing between images if needed */
+  transition: transform 0.5s ease-in-out; /* Smooth scrolling effect */
+  position: relative;
+}
+
+.gallery-item {
+  flex: 0 0 auto; /* Ensure items don't shrink or grow */
+  width: 100%; /* Ensure each image takes full width of the container */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures the image scales proportionally */
+  border: 2px solid #ccc; /* Optional border for visual feedback */
+  border-radius: 8px; /* Optional rounded corners */
+}
