@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 
 * {
@@ -6,43 +7,22 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     height: 100%;
     width: 100%;
-    margin: 0;
 }
-
-#main {
-    position: relative; /* Positioning is necessary for pseudo-element */
+#main{
     height: 100%;
     width: 100%;
     background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1060&t=st=1701062942~exp=1701063542~hmac=bfc8c76f240fe8332176dee6534a9c99b90f5f039252cc6a3153310c96c7a5a1);
-    background-size: cover; /* Ensure the background covers the container */
-    background-position: center; /* Center the background image */
     font-family: 'Lilita One', sans-serif;
     display: flex;
     flex-direction: column;
+    
     align-items: center;
     gap: 30px;
 }
-
-#main::before {
-    content: ''; /* Necessary to make the pseudo-element render */
-    position: absolute; /* Position it over the #main */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    z-index: 1; /* Ensure the overlay stays above the background image */
-}
-
-#main > * {
-    position: relative; /* Keep content above the overlay */
-    z-index: 2; /* Ensure elements stay above the overlay */
-    color: white; /* Optional: Change text color to white for visibility */
-}
-
 h1{
     color: rgba(0, 0, 0, 0.646);
     font-size: 60px;
