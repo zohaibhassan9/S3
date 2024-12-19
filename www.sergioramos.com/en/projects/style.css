@@ -15,7 +15,7 @@ body {
 #mainb {
     height: 100%;
     width: 100%;
-    background-color: rgb(38, 38, 38);
+    /* background-color: rgb(38, 38, 38); */
     font-family: 'Lilita One', sans-serif;
     display: flex;
     justify-content: center;
