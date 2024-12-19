@@ -1,113 +1,108 @@
-*{
-    font-family: sans-serif;
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-}
-
-.card-wrapper{
-    max-width: 1100px;
-    margin: 0 60px 35px;
-    padding: 20px 10px;
-    overflow: hidden;
-}
-
-.card-list .card-item{
-    list-style: none;
-}
-
-.card-list .card-item .card-link{
-    user-select: none;
-    display: block;
-    background: #fff;
-    padding: 18px;
-    border-radius: 12px;
-    text-decoration: none;
-    border: 2px solid transparent;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-    transition: 0.2s ease;
-}
-
-.card-list .card-item .card-link:active{
-    cursor: grabbing;
-}
-
-.card-list .card-item .card-link:hover{
-    border-color: #5372f0;
-}
-
-.card-list .card-link .card-image{
+body {
+    height: 100%;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    margin: 0;
+}
+
+#main {
+    position: relative; /* Positioning is necessary for pseudo-element */
+    height: 100%;
+    width: 100%;
+    background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1060&t=st=1701062942~exp=1701063542~hmac=bfc8c76f240fe8332176dee6534a9c99b90f5f039252cc6a3153310c96c7a5a1);
+    background-size: cover; /* Ensure the background covers the container */
+    background-position: center; /* Center the background image */
+    font-family: 'Lilita One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#main::before {
+    content: ''; /* Necessary to make the pseudo-element render */
+    position: absolute; /* Position it over the #main */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay stays above the background image */
+}
+
+#main > * {
+    position: relative; /* Keep content above the overlay */
+    z-index: 2; /* Ensure elements stay above the overlay */
+    color: white; /* Optional: Change text color to white for visibility */
+}
+
+h1{
+    color: rgba(0, 0, 0, 0.646);
+    font-size: 60px;
+    word-spacing: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 60px;
+}
+#main>h1 span{
+    -webkit-text-stroke: 1px black;
+    text-stroke: 4px rgb(255, 255, 255);
+    color: aliceblue;
+}
+#wrapper{
+    height: 60vh ;
+    
+    display: flex;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 20px 50px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+#wrapper i{
+    font-size: 25px;
+    pointer-events: none
+}
+#image-container{
+    height: 100%;
+    width: 50vw;
+    overflow: hidden;
+    padding: 0px 30px;
+    
+}
+#image-carousel{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 100px;
+    position: relative;
+}
+#image-carousel img{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    border-radius: 25px;
+    position: absolute;
+    transition: 1s; 
+    
+    padding: 0px 15px;
+}
+button{
+    
+    
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
     border-radius: 10px;
 }
 
-.card-list .card-link .badge{
-    color: blue;
-    margin: 16px 0 18px;
-    padding: 8px 16px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    background: #dde4ff;
-    width: fit-content;
-    border-radius: 50px;
-}
-
-.card-list .card-link .card-title{
-    font-size: 16px;
-    color: #000;
-    font-weight: 100;
-}
-
-.card-list .card-link .card-button{
-    height: 35px;
-    width: 35px;
-    color: #5372f0;
-    border-radius: 50%;
-    margin: 30px 0 5px;
-    background: none;
-    cursor: pointer;
-    transform: rotate(-45deg);
-    border: 2px solid #5382f0;
-    transition: 0.4s ease;
-}
-
-.card-list .card-link:hover .card-button{
-    color: #fff;
-    background: #5372f0;
-}
-
-.card-wrapper .swiper-pagination-bullet{
-    height: 13px;
-    width: 13px;
-    opacity: 0.5;
-    background: #5372f0;
-}
-
-.card-wrapper .swiper-pagination-bullet-active{
-    opacity: 1;
-}
-
-.card-wrapper .swiper-slide-button{
-    color: #5372f0;
-    margin-top: -35px;
-} 
-
-@media screen and (max-width: 768px){
-    .card-wrapper{
-        margin: 0 10px 25px;
-    }
-
-    .card-wrapper .swiper-slide-button{
-        display: none;
-    }
-}
