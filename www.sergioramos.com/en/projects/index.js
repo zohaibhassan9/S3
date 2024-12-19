@@ -10,7 +10,7 @@ const nxt = document.querySelector('#next')
 images.forEach((slide,index)=>{
     slide.style.left = `${index * 100}%`
 })
-let counter = 1;
+let counter = 0;
 
 const slideImage = ()=>{
     images.forEach(
@@ -32,7 +32,7 @@ const prev = ()=>{
     }
 }
 const next = ()=>{
-    if(counter <= (images.length - 1)){
+    if(counter <= (images.length - 2)){
         
         counter ++;
         slideImage();
