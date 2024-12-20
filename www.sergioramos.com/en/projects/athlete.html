@@ -152,17 +152,17 @@ var log_object = {"ajax_url":"https:\/\/www.sergioramos.com\/wp-admin\/admin-aja
 					position: relative; 
 					overflow: hidden;">
 				<!-- Black overlay -->
-				<div style="
+				<div style= ">
 					content: ''; 
 					position: absolute; 
 					top: 0; 
 					left: 0; 
 					width: 100%; 
 					height: 100%; 
-					background: rgba(0, 0, 0, .7); 
-					z-index: 0;">
+					mask-image: var(--wp--preset--color--black);
+					background: rgba(0, 0, 0, .6); 
+					padding: 90PX;
 				</div>
-	
 				<!-- Content -->
 				<div class="contenido" style="position: relative; z-index: 1;">
 					<div class="titulo">
