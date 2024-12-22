@@ -1,21 +1,25 @@
-const carousel = document.querySelector("#image-carousel");
+// script.js
+const carousel = document.getElementById("image-carousel");
 const images = document.querySelectorAll("#image-carousel img");
-const prevButton = document.querySelector("#prev");
-const nextButton = document.querySelector("#next");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
 
 let currentIndex = 0;
-const imagesToShow = 3; // Number of images visible at a time
+let imagesToShow = calculateImagesToShow();
 const totalImages = images.length;
 
-// Calculate the width of a single image
-const imageWidth = images[0].clientWidth;
+function calculateImagesToShow() {
+    const width = window.innerWidth;
+    if (width <= 480) return 1;
+    if (width <= 768) return 2;
+    return 3;
+}
 
-// Update carousel position
-const updateCarousel = () => {
-    carousel.style.transform = `translateX(-${currentIndex * (100 / imagesToShow)}%)`;
-};
+function updateCarousel() {
+    const shiftPercentage = (100 / imagesToShow) * currentIndex;
+    carousel.style.transform = `translateX(-${shiftPercentage}%)`;
+}
 
-// Add event listeners for buttons
 prevButton.addEventListener("click", () => {
     if (currentIndex > 0) {
         currentIndex--;
@@ -30,5 +34,10 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-// Initialize the carousel
+window.addEventListener("resize", () => {
+    imagesToShow = calculateImagesToShow();
+    currentIndex = Math.min(currentIndex, totalImages - imagesToShow);
+    updateCarousel();
+});
+
 updateCarousel();
