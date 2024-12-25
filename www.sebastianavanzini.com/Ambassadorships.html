@@ -179,6 +179,48 @@ img.emoji {
 						<p>
 							<span style="font-weight: 400;">Sebastian Avanzini, known as "The Brand," proudly represents leading global brands, enhancing his performance both on and off the football field. In addition to ambassadorships, he has modeled for renowned campaigns with brands like Honda, Aston Villa, Puma, and others.</span>
 						</p>
+						<Button class="water-drop-button">Get into touch</Button>
+						<style>
+							.water-drop-button {
+							  background: linear-gradient(135deg, rgba(132, 155, 163, 0.8), rgba(176, 199, 207, 0.8)); /* Light blue gradient */
+							  padding: 10px;
+							  border-radius: 15px;
+							  margin-top: 20px;
+							  font-size: 22px;
+							  border: none;
+							  color: white;
+							  cursor: pointer;
+							  position: relative;
+							  overflow: hidden;
+							}
+						  
+							.water-drop-button::before {
+							  content: '';
+							  position: absolute;
+							  top: -50px;
+							  left: -50px;
+							  width: 200%;
+							  height: 200%;
+							  background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+							  opacity: 0.5;
+							  filter: blur(15px);
+							  animation: move-drops 6s infinite linear;
+							}
+						  
+							@keyframes move-drops {
+							  0% {
+								transform: translate(0, 0);
+							  }
+							  100% {
+								transform: translate(-50px, -50px);
+							  }
+							}
+						  
+							.water-drop-button:hover {
+							  background: linear-gradient(135deg, rgba(0, 191, 255, 0.8), rgba(173, 216, 230, 0.8));
+							}
+						  </style>
+						  						  
 					</div>
 				</div>
 			</div>
