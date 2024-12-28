@@ -197,34 +197,90 @@
 </main>
 					
 
-					
+						
 <footer id="footer" class="bg_dark">
 	<div class="contenido">
 		<div class="legal_info">
-			<p class="terms">
-				<a href="enterpreneurjourney.html" rel="nofollow" style="margin-right: 20px;">Legal notice</a> 
-				<style>
-					/* Basic styling for the link */
-					a.email-link {
-					  color: white;
-					  text-decoration: none;
-					  font-size: 18px;
-					}
-				  
-					/* Hover effect for the link */
-					a.email-link:hover {
-					  color: rgb(118, 118, 233); /* Change text color on hover */
-					  text-decoration: underline; /* Add underline on hover */
-					  cursor: pointer; /* Change cursor to pointer */
-					}
-				  </style>
+
+<!-- <button id="legalNoticeBtn">Legal Notice</button>
+<div id="legalNoticeModal" class="modal">
+<div class="modal-content">
+<span class="close-btn">&times;</span>
+<h2 style="color: rgb(114, 114, 255);">Legal Notice</h2>
+<p>
+All content on this website, including images, videos, and text, is the property of <b>Sebastian Avanzini</b>  and is protected by copyright laws. Unauthorized use, reproduction, or distribution of any materials is strictly prohibited. For permissions or inquiries, please contact <a href="mailto:@example.com" class="email-popup">Contact@sebastianavanzini.com</a>.
+</p>
+</div>
+</div>
+<style>
+a.email-popup {
+color: rgb(118, 118, 233);
+text-decoration: underline;
+cursor: pointer; 
+}
+
+a.email-popup:hover{
+color: #164ab9;
+}
+</style>
+<style>
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+color: #000;
+}
+
+.modal-content {
+background-color: rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(5px);
+margin: 15% auto;
+padding: 20px;
+border-radius: 10px;
+width: 80%;
+max-width: 500px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.5); 
+
+.close-btn {
+color: #ca4343;
+float: right;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close-btn:hover {
+color: #000;
+}
+</style> -->
+
+
+<style>
+	/* Basic styling for the link */
+	a.email-link {
+	  color: white;
+	  text-decoration: none;
+	  font-size: 18px;
+	}
+  
+	/* Hover effect for the link */
+	a.email-link:hover {
+	  color: rgb(118, 118, 233); /* Change text color on hover */
+	  text-decoration: underline; /* Add underline on hover */
+	  cursor: pointer; /* Change cursor to pointer */
+	}
+  </style>
 				  
 				  <a href="mailto:Contact@sebastianavanzini.com" class="email-link">
 					Contact@sebastianavanzini.com
 				  </a>
-				  
-				  
-			</p>
+				</p>
 		</div>
 		
 		<style>
@@ -246,12 +302,36 @@
 		</div>
 	</footer>
 
-
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
 <script type='text/javascript' id='eio-lazy-load-js-before'>
 var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0};
 </script>
 <!-- Media all images -->
 <script  src="dddfe.js"></script>
+<script>
+	// Get modal and button elements
+	const modal = document.getElementById("legalNoticeModal");
+	const btn = document.getElementById("legalNoticeBtn");
+	const closeBtn = document.querySelector(".close-btn");
+  
+	// Open modal when button is clicked
+	btn.onclick = function () {
+	  modal.style.display = "block";
+	};
+  
+	// Close modal when the close button is clicked
+	closeBtn.onclick = function () {
+	  modal.style.display = "none";
+	};
+  
+	// Close modal when clicking outside of it
+	window.onclick = function (event) {
+	  if (event.target === modal) {
+		modal.style.display = "none";
+	  }
+	};
+  </script>
 
 <script type="text/javascript">(function() {
 				var expirationDate = new Date();
@@ -261,4 +341,3 @@ var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0};
 </body>
 
 </html>
-
