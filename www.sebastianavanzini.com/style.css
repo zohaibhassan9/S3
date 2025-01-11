@@ -1,7 +1,5 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-
 #gallery {
     display: flex;
     align-items: center;
@@ -11,6 +9,7 @@
 }
 
 #image-container {
+    margin-bottom: 70px;
     flex: 2;
     overflow: hidden;
     border-radius: 10px;
@@ -50,8 +49,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     #image-carousel{
-        min-height: 400px;
-        width: 500px;
+      width: 500px;
+    
     }
 
 }
