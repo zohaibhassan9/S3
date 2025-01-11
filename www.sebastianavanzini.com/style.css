@@ -47,11 +47,11 @@
 
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
-    #image-carousel{
+    #gallery{
       width: 500px;
-    
-    }
+ }
 
 }
 
