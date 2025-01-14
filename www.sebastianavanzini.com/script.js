@@ -24,3 +24,25 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+
+
+let scrollContainer = document.querySelector(".gallery");
+let backBtn = document.getElementById("backBtn")
+let nextBtn = document.getElementById("backBtn")
+
+scrollContainer.addEventListener("wheel", (evt) =>{
+  scrollContainer.style.scrollBehavior = "auto";
+  evt.preventDefault += evt.deltaY;
+});
+
+nextBtn.addEventListener("click", ()=>{
+  scrollContainer.style.scrollBehavior = "smooth";
+  scrollContainer.scrollLeft += 900;
+});
+
+backBtnBtn.addEventListener("click", ()=>{
+  scrollContainer.style.scrollBehavior = "smooth";
+
+  scrollContainer.scrollLeft -= 900;
+});
