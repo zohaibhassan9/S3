@@ -71,22 +71,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 							<button class="btn1" onclick="window.location.href='https://sebastianavanzini.com/'">Portfolio</button>
 
 							<style>
-							  .btn1 {
-								background: rgba(255, 255, 255, 0.2);
-								padding: 10px 20px;
-								border-radius: 2px;
-								cursor: pointer;
-								margin-top: 2px;
-								color: white;
-								font-size: 15px;
-								border: none; /* Ensure no visible border */
-							  }
-							  .btn1:focus,
-							  .btn1:active {
-								outline: none; /* Remove the focus/active border outline */
-								box-shadow: none; /* Remove any shadow applied on active state */
-							  }
-							</style>
+								.btn1 {
+								  background: transparent;
+							  
+								  cursor: pointer;
+								  margin-top: 2px;
+								  color: white;
+								  font-size: 20px;
+								  border: none; /* Ensure no visible border */
+								}
+							  </style>
+
 						</div>
 						<div id="menu_on">
 							<span></span>
@@ -133,8 +128,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</head>
 		<body>
 		<div class="dropdown">
-		  <a href="Ambassadorships.html"><button class="dropbtn" style="cursor: pointer;">Ambassadorships</button></a>
-		  <div class="dropdown-content">
+			<a href="Ambassadorships.html"><button class="dropbtn" style="cursor: pointer; background: transparent; color: #ffffff; border: none; font-size: 20px;">Ambassadorships</button></a>
+			<div class="dropdown-content">
 			<a href="#">Portfolio</a>
 		  </div>
 		</div></li>		</ul>
@@ -405,13 +400,7 @@ color: #000;
 				</p>
 				<!-- <p class="copyright">©&nbsp;2025&nbsp;SEBASTIANAVAZINI</p> -->
 			</div>
-			<style>
-				.social_copyright{
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-			</style>
+	
 		</div>
 	</footer>
 <div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
