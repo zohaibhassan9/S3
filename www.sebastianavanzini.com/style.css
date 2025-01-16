@@ -1,81 +1,63 @@
-/* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-#gallery {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    max-width: 60%;
-    overflow: hidden;
-}
-
-#image-container {
-    margin-bottom: 70px;
-    flex: 2;
-    overflow: hidden;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-}
-
-#image-carousel {
-    
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 10px;
-}
-
-#image-carousel img {
-    width: calc(100% / 3);
-    object-fit: cover;
-    height: auto;
-    border-radius: 5px;
-}
-
-.control-btn {
-    background-color: #ffffff;
-    color: #007bff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 14px;
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #191919;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .gallery-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    margin: 10% auto;
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    width: 900px;
+    scroll-behavior: smooth;
+  }
 
 
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    #gallery{
-      width: 500px;
- }
-
-}
-
-@media (max-width: 768px) {
-    #image-carousel img {
-        width: calc(100% / 2); /* Show 2 images */
+  @media (max-width: 768px) {
+    .gallery {
+      width: 300px; /* Adjust the gallery container width for mobile screens */
     }
-    .control-btn {
-        font-size: 15px;
-        padding: 5px;
-        border-radius: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
+ 
+  }
+  
+    
 
-@media (max-width: 480px) {
-    #image-carousel img {
-        width: 100%; /* Show 1 image */
-    }
 
-    .control-btn {
-        padding: 8px 12px;
-        font-size: 16px;
-    }
-}
+
+  .gallery span {
+    flex: none;
+  }
+  
+  .gallery img {
+    width: 300px;
+    height: 60vh;
+
+  }
+  
+
+  
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #backBtn,
+  #nextBtn {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    margin: 0 20px;
+  }
+  

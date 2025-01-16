@@ -1,43 +1,22 @@
-// script.js
-const carousel = document.getElementById("image-carousel");
-const images = document.querySelectorAll("#image-carousel img");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
+const scrollContainer = document.querySelector(".gallery");
+const backBtn = document.getElementById("backBtn");
+const nextBtn = document.getElementById("nextBtn");
 
-let currentIndex = 0;
-let imagesToShow = calculateImagesToShow();
-const totalImages = images.length;
+// Get the width of one image (including margin)
+const imageWidth = document.querySelector(".gallery span img").offsetWidth + 20; // 20px for the gap between images
 
-function calculateImagesToShow() {
-    const width = window.innerWidth;
-    if (width <= 480) return 1;
-    if (width <= 768) return 2;
-    return 3;
-}
-
-function updateCarousel() {
-    const shiftPercentage = (100 / imagesToShow) * currentIndex;
-    carousel.style.transform = `translateX(-${shiftPercentage}%)`;
-}
-
-prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-    }
+// Scroll right by one image
+nextBtn.addEventListener("click", () => {
+  scrollContainer.scrollLeft += imageWidth;
 });
 
-nextButton.addEventListener("click", () => {
-    if (currentIndex < totalImages - imagesToShow) {
-        currentIndex++;
-        updateCarousel();
-    }
+// Scroll left by one image
+backBtn.addEventListener("click", () => {
+  scrollContainer.scrollLeft -= imageWidth;
 });
 
-window.addEventListener("resize", () => {
-    imagesToShow = calculateImagesToShow();
-    currentIndex = Math.min(currentIndex, totalImages - imagesToShow);
-    updateCarousel();
+// Add wheel scrolling behavior for smooth horizontal scrolling
+scrollContainer.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  scrollContainer.scrollLeft += event.deltaY;
 });
-
-updateCarousel();

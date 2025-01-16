@@ -69,96 +69,139 @@
 			</div>
 		</header>
 		
-		
 
 		<nav>	
+
 			<ul>
-				<li><a href="theperson.html">The Person</a></li>
-				<li><a href="athlete.html">The Athlete</a></li>
-				<li><a href="enterpreneurjourney.html">The Enterpreneur</a></li>
-				<li><a href="philantrophy.html">Philantrophy</a></li>
-		<li>
-		<style>
+			  <li><a href="theperson.html">The Person</a></li>
+			  <li><a href="athlete.html">The Athlete</a></li>
+			  <li><a href="enterpreneurjourney.html">The Entrepreneur</a></li>
+			  <li><a href="philantrophy.html">Philanthropy</a></li>
+			  <li>
+				<div class="dropdown">
+				  <div class="dropdown-header">
+					<a href="Ambassadorships.html">Ambassadorships</a>
+					<button class="dropbtn" onclick="toggleDropdown()">&#9660;</button>
+				  </div>
+				  <div class="dropdown-content">
+					<a href="#">Portfolio</a>
+				  </div>
+				</div>
+			  </li>
+			</ul>
 		
+		  
+	<style>/* Dropdown container */
+	
+	.dropdown-header{
+		font-size: 18px;
+		margin-left: -24px;
+	}
+	
+		.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
 		
+		/* Dropdown header alignment */
+		.dropdown-header {
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		  gap: 5px; /* Optional spacing */
+		}
+		
+		.dropdown-header a {
+		  text-decoration: none;
+		  color: white;
+		  font-size: 24px;
+		  font-weight: 500;
+		}
+		
+		.dropbtn {
+		  cursor: pointer;
+		  background: transparent;
+		  border: none;
+		  font-size: 16px;
+		  color: rgb(255, 255, 255); /* Adjust color as needed */
+		  margin: 0;
+		  padding: 0;
+		}
+		
+		/* Dropdown content */
 		.dropdown-content {
 		  display: none;
 		  position: absolute;
 		  min-width: 160px;
-		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		  z-index: 1;
 		}
 		
 		.dropdown-content a {
-			color: #f1f1f1;
-			padding: 12px 16px;
+		  color: #f1f1f1;
+		  padding: 12px 16px;
 		  text-decoration: none;
 		  display: block;
 		}
-		
-		
-		.dropdown:hover .dropdown-content {display: block;}
-		
 		</style>
-		</head>
-		<body>
-		<div class="dropdown">
-			 <a href="Ambassadorships.html"><button class="dropbtn" style="cursor: pointer; background: transparent; color: #ffffff; border: none; font-size: 20px;">Ambassadorships</button></a>
-		  <div class="dropdown-content">
-			<a href="#">Portfolio</a>
-		  </div>
-		</div></li>				</ul>
-				<ul>
-			
-					<div class="container">
-						<section class="head">
+	<script>function toggleDropdown() {
+		const dropdownContent = document.querySelector('.dropdown-content');
+		dropdownContent.style.display =
+		  dropdownContent.style.display === 'block' ? 'none' : 'block';
+	  }
+	  </script>
+	
+		  
+	
+			<div class="container">
+				<section class="head">
+		
+					<!-- First Row -->
+					
+					<div class="slider" style="margin-top: 80px; width: 80%;">
+						<h1 style="color: #ffffff; padding: 0; font-size: 20px; font-weight: 600; margin-bottom: 60px;">
+							I WORK WITH BRANDS I BELIEVE IN
+						  </h1>
+						<div>
+							<a href="#">
+								<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734702434/Company_Logo_white_sml3vz.png" alt="">
+							</a>
+						</div>
 				
-							<!-- First Row -->
-							
-							<div class="slider" style="margin-top: 80px;">
-								<h1 style="color: #ffffff; padding: 0; font-size: 20px; font-weight: 600; margin-bottom: 60px;">
-									I WORK WITH BRANDS I BELIEVE IN
-								  </h1>
-								  
-								<div>
-									<a href="#">
-										<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734702434/Company_Logo_white_sml3vz.png" alt="">
-									</a>
-								</div>
-						
-								<div>
-									<a href="#">
-										<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734796064/Educate__2_-removebg-preview_d7ije0.png" alt="">
-									</a>
-								</div>
-			
-								<div>
-									<a href="#">
-										<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734796064/Educate-removebg-preview_1_l0cfns.png" alt="">
-									</a>
-								</div>
-								<div>
-									<a href="#">
-										<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734709667/Educate__2_-removebg-preview_j2kmqh.png" alt="">
-									</a>
-								</div>
-						   
-								<div>
-									<a href="#">
-										<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734707757/image_1-removebg-preview_cx4uje.png" alt="">
-									</a>
-								</div>
-								<div>
-									<a href="#">
-										<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734709106/IMG_1195-white-logo_1_c9vo0r.png" alt="">
-									</a>
-								</div>
-							</div>
-				
-						</section>
+						<div>
+							<a href="#">
+								<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734796064/Educate__2_-removebg-preview_d7ije0.png" alt="">
+							</a>
+						</div>
+	
+						<div>
+							<a href="#">
+								<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734796064/Educate-removebg-preview_1_l0cfns.png" alt="">
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734709667/Educate__2_-removebg-preview_j2kmqh.png" alt="">
+							</a>
+						</div>
+				   
+						<div>
+							<a href="#">
+								<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734707757/image_1-removebg-preview_cx4uje.png" alt="">
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734709106/IMG_1195-white-logo_1_c9vo0r.png" alt="">
+							</a>
+						</div>
 					</div>
-				</ul>
-			</nav>
+		
+				</section>
+			</div>
+		</ul>
+	
+	</nav>
 
 
 <main>
@@ -236,25 +279,34 @@
 		
        </div>
 
-       <div id="gallery" style="margin-top: 80px;">
-           <div class="controls">
-               <button id="prev" class="control-btn"><i class="fa fa-arrow-left"></i></button>
-           </div>
-           <div id="image-container">
-               <div id="image-carousel">
-                   <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595501/IMG_9165_11zon_y5hhdh.jpg" alt="Image 1">
-                   <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595525/IMG_9198_11zon_rhz3jz.jpg" alt="Image 2">
-                   <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595509/IMG_9160_11zon_oqoexb.jpg" alt="Image 3">
-                   <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595486/IMG_9173_11zon_zv1cfl.jpg" alt="Image 4">
-                   <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595468/IMG_9159_11zon_umgyvm.jpg" alt="Image 5">
-               </div>
-           </div>
-           <div class="controls">
-               <button id="next" class="control-btn"><i class="fa fa-arrow-right"></i></button>
-           </div>
-       </div>
-       <script src="index.js"></script>
-    </div>
+	   <div class="gallery-wrap">
+		<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1736825560/back_handtm.png" id="backBtn" alt="Previous">
+		<div class="gallery">
+		 <span>
+				<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595517/IMG_9175_1__11zon_mmwnwu.jpg" alt="Image 1">
+			</span>
+			<span>
+				<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595525/IMG_9198_11zon_rhz3jz.jpg" alt="Image 2">
+			</span>
+			<span>
+				<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595509/IMG_9160_11zon_oqoexb.jpg" alt="Image 3">
+			</span>
+			<span>
+				<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595501/IMG_9165_11zon_y5hhdh.jpg" alt="Image 3">
+			</span>
+			<span>
+				<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595465/IMG_9162_11zon_ltqpon.jpg" alt="Image 3">
+			</span>
+			<span>
+				<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734595486/IMG_9173_11zon_zv1cfl.jpg
+				" alt="Image 3">
+			</span>
+		</div>
+		<img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1736825560/next_qhekgb.png" id="nextBtn" alt="Next">
+	  </div>
+	
+	<script src="index.js"></script>
+	
 	
 </main>
 					
